@@ -1,16 +1,22 @@
-# This is a sample Python script.
+from tkinter import *
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def random_update():
+    labell.config(text=str(random.random()))
+    root.after(1, random_update)
+
+root = Tk()
+
+root.title("frc dashboard")
+root.geometry("1500x800")
+root.configure(background='#605e5c')
+
+labell = Label(text='1', width=100, background="lightgrey", font=('intalic', 15))
+labell.pack()
+
+stream_cameraa = Label(text="yo")
+stream_cameraa.pack()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+root.after(500, random_update)
+root.mainloop()
