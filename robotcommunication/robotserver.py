@@ -1,7 +1,6 @@
 import socket
 import cv2
 import base64
-import runpy as np
 host = '213.137.70.216' #server ip
 port = 8089 # server used port
 

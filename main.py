@@ -1,5 +1,6 @@
 from tkinter import *
 import random
+import robotcommunication.robotserver
 
 def random_update():
     labell.config(text=str(random.random()))
@@ -18,5 +19,6 @@ stream_cameraa = Label(text="yo")
 stream_cameraa.pack()
 
 
-root.after(500, random_update)
-root.mainloop()
+if __name__ == "robotserver":
+    root.after(500, random_update())
+    root.mainloop()
