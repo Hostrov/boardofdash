@@ -1,7 +1,7 @@
 import socket
 import cv2
 import base64
-host = '213.137.70.216' # localhost ip
+host = '213.137.65.141' # localhost ip
 port = 8089 # server used port
 
 stream_dayta = cv2.VideoCapture(0)

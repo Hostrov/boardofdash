@@ -1,11 +1,12 @@
 import socket
 
-ip = '10.0.0.38'
+iip =  "192.168.209.133"
 teksock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-teksock.bind(ip, 6)
-senderip, addr = teksock.accept()
+teksock.bind((iip, 6))
 
 teksock.listen(10)
+ip, addr = teksock.accept()
 
-print(senderip, addr)
+
+print(ip, addr)
